@@ -1,0 +1,6 @@
+import Image from "next/image";
+
+export function AveryFooter() {
+  const columns = [{title:"Create",links:["Templates","Avery Design & Print","Custom Printing"]},{title:"Shop",links:["Labels","Stickers","Name Badges"]},{title:"Support",links:["Help Center","Contact Us","Privacy"]}];
+  return <footer className="bg-[#F7F7F7] text-[#000A55]"><div className="mx-auto grid max-w-[1320px] gap-12 px-5 py-16 sm:grid-cols-2 lg:grid-cols-4 lg:px-10"><div><a href="https://www.avery.com" aria-label="Avery home" className="inline-block"><Image src="/avery-logo.png" width={648} height={308} alt="Avery" className="h-auto w-[150px]" /></a><p className="mt-7 max-w-xs text-sm leading-6">Labels, cards, templates and design tools for ideas you can hold in your hands.</p><p className="mt-5 font-bold text-[#E00034]">Ideas stick here.</p></div>{columns.map((column) => <div key={column.title}><h2 className="font-black text-[#0039A6]">{column.title}</h2><ul className="mt-5 grid gap-3 text-sm">{column.links.map((link) => <li key={link}><a href="#" className="font-medium underline-offset-4 hover:underline">{link}</a></li>)}</ul></div>)}</div><div className="bg-[#000A55] px-5 py-5 text-xs text-white lg:px-10"><div className="mx-auto max-w-[1320px]">© {new Date().getFullYear()} Avery Products Corporation. Placeholder links remain for MVP integration.</div></div></footer>;
+}
