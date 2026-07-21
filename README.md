@@ -7,12 +7,11 @@ Production-oriented MVP for `/software/background-remover`. The page accepts JPG
 Requirements: Node.js 22.13 or newer and a Cloudinary account with AI Background Removal enabled.
 
 ```bash
-npm ci
-copy .env.example .env.local
+npm install
 npm run dev
 ```
 
-Open `http://localhost:3000/software/background-remover`.
+Create `.env.local` with the Cloudinary values below, then open `http://localhost:3000/software/background-remover`.
 
 ## Cloudinary setup
 
